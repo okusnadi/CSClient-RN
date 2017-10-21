@@ -1,4 +1,10 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+/**
+ * @flow
+ */
 
-AppRegistry.registerComponent('csclientrn', () => App);
+'use strict';
+
+import { AppRegistry } from 'react-native';
+import CSClient from './src/index';
+
+AppRegistry.registerComponent('csclient', () => CSClient);
