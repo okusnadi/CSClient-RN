@@ -2,20 +2,11 @@
   "name": "csclient",
   "version": "3.0.2",
   "private": true,
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ],
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "startrs": "npm start -- --reset-cache",
     "test": "jest",
+    "test:watch": "jest --watch",
     "flow": "node_modules/.bin/flow",
     "checkdeps": "ncu --packageFile package.json",
     "i5s": "react-native run-ios --simulator=\"iPhone 5s\"",
@@ -27,14 +18,15 @@
     "clean:android-win": "cd android/ && gradlew clean && cd ..",
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
-    "android:buildRelease": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
+    "android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
     "android:devices": "$ANDROID_HOME/platform-tools/adb devices",
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "precommit": "lint-staged",
-    "prepush": "npm test -s",
-    "flow-stop": "flow stop"
+    "lint": "standard --verbose | snazzy",
+    "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
+    "fixcode": "standard --fix",
+    "git-hook": "npm run lint -s && npm run test -s"
   },
   "dependencies": {
     "base-64": "^0.1.0",
@@ -114,5 +106,21 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "config": {},
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "test",
+      "jest",
+      "expect",
+      "fetch",
+      "navigator",
+      "__DEV__",
+      "XMLHttpRequest",
+      "FormData",
+      "React$Element"
+    ]
   }
 }
