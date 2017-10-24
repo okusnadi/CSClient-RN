@@ -52,3 +52,5 @@ With CSClient-RN, we use two main plugins on server side to provide the REST API
 - [OneSignal](https://wordpress.org/plugins/onesignal-free-web-push-notifications/) for cross-platform push notification service.
 - [WP-Basic-Auth](https://wordpress.org/plugins/wp-basic-auth/) Using for user authentication after they have registered on your site.
 - [Application Passwords](https://wordpress.org/plugins/application-passwords/) for user-registration. With the design of WordPress API, there is no way to add an user without authenticating as a privileged user first (which I found weird). We also should not expose admin's password to anyone, so this is the best option for now.
+
+- [Native-Base Theme ejection](https://github.com/GeekyAnts/NativeBase/issues/830)

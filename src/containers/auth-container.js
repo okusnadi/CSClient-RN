@@ -4,7 +4,7 @@
 
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Body,
   Button,
@@ -25,6 +25,7 @@ import {
   Keyboard,
   Text,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 import FlipCard from 'react-native-flip-card';
@@ -43,7 +44,7 @@ class AuthContainer extends Component {
   static navigationOptions = {
     title: 'Login Screen',
     headerLeft: (
-      <Button title={''} transparent>
+      <Button title="" transparent>
         <Icon name="menu" />
       </Button>
     ),
@@ -91,17 +92,17 @@ class AuthContainer extends Component {
         />
         <Header
           noShadow
-          backgroundColor={'transparent'}
+          backgroundColor="transparent"
           style={{ backgroundColor: 'transparent', borderBottomWidth: 0 }}
-          iosBarStyle={'light-content'}
+          iosBarStyle="light-content"
         >
           <StatusBar
             translucent
-            backgroundColor={'transparent'}
+            backgroundColor="transparent"
             barStyle="light-content"
           />
           <Left>
-            <Button title={''} onPress={() => goBack()} transparent>
+            <Button title="" onPress={() => goBack()} transparent>
               <Icon style={{ color: '#fff' }} name="arrow-back" />
             </Button>
           </Left>

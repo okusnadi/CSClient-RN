@@ -4,7 +4,7 @@
 
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Keyboard,
   View,
@@ -29,6 +29,7 @@ import {
   Text,
   Spinner,
 } from 'native-base';
+import PropTypes from 'prop-types';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { getPost, clearPost } from '../actions/actions-content';
 import ItemComment from '../components/items/item-comment';

@@ -29,6 +29,7 @@
     "git-hook": "npm run lint -s && npm run test -s"
   },
   "dependencies": {
+    "apisauce": "^0.14.1",
     "base-64": "^0.1.0",
     "blueimp-md5": "^2.10.0",
     "fast-html-parser": "^1.0.1",
@@ -47,7 +48,6 @@
     "react-native-code-push": "^5.1.3-beta",
     "react-native-config": "^0.9.0",
     "react-native-device-info": "^0.12.1",
-    "react-native-dialog-component": "^0.2.16",
     "react-native-draftjs-render": "^2.3.0",
     "react-native-flip-card": "^3.5.2",
     "react-native-html-parser": "^0.0.5",
