@@ -37,6 +37,7 @@
     "lodash": "^4.17.4",
     "lottie-react-native": "^2.2.7",
     "moment": "^2.19.1",
+    "native-base": "^2.3.3",
     "querystringify": "^1.0.0",
     "react": "16.0.0",
     "react-native": "0.49.3",
@@ -73,9 +74,9 @@
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "babel-jest": "^21.2.0",
-    "babel-plugin-ignite-ignore-reactotron": "^0.3.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-flow-react-proptypes": "^6.1.0",
+    "babel-plugin-ignite-ignore-reactotron": "^0.3.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
@@ -100,9 +101,9 @@
     "mockery": "^2.1.0",
     "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
+    "react-dom": "16.0.0",
     "react-test-renderer": "^16.0.0",
-    "snazzy": "^7.0.0",
-    "react-dom": "16.0.0"
+    "snazzy": "^7.0.0"
   },
   "jest": {
     "preset": "react-native"

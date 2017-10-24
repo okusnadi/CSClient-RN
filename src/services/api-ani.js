@@ -44,3 +44,4 @@ const create = (baseURL = 'https://anilist.co/api/') => {
 };
 
 export default { create };
+export { Status };
