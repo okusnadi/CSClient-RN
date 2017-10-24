@@ -60,7 +60,6 @@
     "react-native-snap-carousel": "^3.3.4",
     "react-native-spinkit": "^1.1.1",
     "react-native-vector-icons": "^4.4.2",
-    "react-native-zss-rich-text-editor": "^1.0.2",
     "react-navigation": "^1.0.0-beta.15",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",

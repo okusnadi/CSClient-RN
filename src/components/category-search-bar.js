@@ -4,8 +4,9 @@
 
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { TextInput, View, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 import { Icon } from 'native-base';
 
 export const CategorySearchBar = props => (
@@ -14,7 +15,7 @@ export const CategorySearchBar = props => (
       <Icon name="search" style={styles.searchBoxIcon} />
       <TextInput
         underlineColorAndroid="transparent"
-        returnKeyType={'search'}
+        returnKeyType="search"
         multiline={false}
         onChangeText={props.onChangeText}
         style={styles.searchBoxInput}

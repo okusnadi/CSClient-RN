@@ -3153,12 +3153,6 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-invariant@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.0.tgz#c8d7e847366a49cc18b622f058a689d481e895f2"
-  dependencies:
-    loose-envify "^1.0.0"
-
 invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.x:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
@@ -3772,10 +3766,6 @@ jsx-ast-utils@^2.0.0:
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.0.1.tgz#e801b1b39985e20fffc87b40e3748080e2dcac7f"
   dependencies:
     array-includes "^3.0.3"
-
-keymirror@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
 
 kind-of@^3.0.2:
   version "3.2.2"
@@ -5172,19 +5162,6 @@ react-native-vector-icons@^4.4.2, react-native-vector-icons@~4.4.2:
     lodash "^4.0.0"
     prop-types "^15.5.10"
     yargs "^8.0.2"
-
-react-native-webview-bridge-updated@^1.0.0:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-native-webview-bridge-updated/-/react-native-webview-bridge-updated-1.0.8.tgz#8cbae2d45bc437fe9146d90a3b44dc9bd1ee8660"
-  dependencies:
-    invariant "2.2.0"
-    keymirror "0.1.1"
-
-react-native-zss-rich-text-editor@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-zss-rich-text-editor/-/react-native-zss-rich-text-editor-1.0.2.tgz#87e5c448fe58081b51b947d077530700735a9ca6"
-  dependencies:
-    react-native-webview-bridge-updated "^1.0.0"
 
 react-native@0.49.3:
   version "0.49.3"

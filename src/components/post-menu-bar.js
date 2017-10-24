@@ -1,8 +1,11 @@
 /**
  * @flow
  */
+
 'use strict';
-import React, { PropTypes } from 'react';
+
+import React from 'react';
+import PropTypes from 'prop-types';
 import { TextInput, TouchableOpacity, View } from 'react-native';
 import { Icon } from 'native-base';
 import { clearPosts, getPosts } from '../actions/actions-content';
@@ -24,7 +27,7 @@ export const PostMenuBar = props => {
         <Icon name="search" style={styles.searchBoxIcon} />
         <TextInput
           underlineColorAndroid="transparent"
-          returnKeyType={'search'}
+          returnKeyType="search"
           multiline={false}
           style={styles.searchBoxInput}
           onSubmitEditing={event => onSubmitSearch(event.nativeEvent.text)}

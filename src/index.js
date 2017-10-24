@@ -1,7 +1,9 @@
 /**
  * @flow
  */
+
 'use strict';
+
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { StyleProvider } from 'native-base';
@@ -11,7 +13,8 @@ import megumi from '../native-base-theme/variables/megumi';
 import CustomStore from './stores/custom-store';
 import RootContainer from './containers/index';
 
-const store = CustomStore();
+// Initialize the store with empty initial state.
+const { store } = CustomStore();
 
 export default class CSClient extends Component {
   componentDidMount() {

@@ -4,9 +4,10 @@
 
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { View, FlatList } from 'react-native';
 import { Spinner, List } from 'native-base';
+import PropTypes from 'prop-types';
 // import { getPosts, clearPosts } from '../actions/actions-posts';
 import { PostMenuBar } from './post-menu-bar';
 import { ItemPostCard } from './items/item-post-card';

@@ -7,4 +7,4 @@
 import { AppRegistry } from 'react-native';
 import CSClient from './src/index';
 
-AppRegistry.registerComponent('csclient', () => CSClient);
+AppRegistry.registerComponent('csclientrn', () => CSClient);

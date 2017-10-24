@@ -4,37 +4,37 @@
 
 'use strict';
 
-import { AsyncStorage } from 'react-native';
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { autoRehydrate, persistStore } from 'redux-persist';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/es/storage';
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default function CustomStore(initialState) {
+// For redux-persist v5:
+const persistConfig = {
+  key: 'root',
+  blacklist: ['nav', 'posts', 'categories', 'post', 'form', 'home', 'settings'],
+  storage,
+};
+
+// Transform original reducer to a persisted one.
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+function CustomStore(initialState) {
   const store = createStore(
-    rootReducer,
+    persistedReducer,
     initialState,
-    compose(applyMiddleware(sagaMiddleware), autoRehydrate()),
+    compose(applyMiddleware(sagaMiddleware)),
   );
+
   sagaMiddleware.run(rootSaga);
-  persistStore(
-    store,
-    {
-      blacklist: [
-        'nav',
-        'posts',
-        'categories',
-        'post',
-        'form',
-        'home',
-        'settings',
-      ],
-      storage: AsyncStorage,
-    },
-    () => console.log('Persist completed'),
-  );
-  return store;
+
+  const persistor = persistStore(store);
+
+  return { persistor, store };
 }
+
+export default CustomStore;
